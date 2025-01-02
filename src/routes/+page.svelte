@@ -27,7 +27,7 @@
 			if (left === right) {
 				if (!permutationList.includes(str)) {
 					permutationList.push(str);
-				}			
+				}
 			} else {
 				for (let i = left; i <= right; i++) {
 					str = swap(str, left, i);
@@ -53,7 +53,7 @@
 	<NumberInput bind:inputValue onchange={calculatePermutations} />
 	<div class="permutations">
 		{#each permutations as permutation}
-			<PermutationOption {permutation}/>
+			<PermutationOption {permutation} />
 		{/each}
 	</div>
 	<Footer {currentYear} />
