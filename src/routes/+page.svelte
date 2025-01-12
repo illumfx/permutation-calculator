@@ -21,7 +21,7 @@
 	}
 
 	function getCombinations(str: string): string[] {
-		const permutationList: string[] = []; // Typ explizit angeben
+		const permutationList: string[] = [];
 
 		function permute(str: string, left: number, right: number): void {
 			if (left === right) {
@@ -32,15 +32,15 @@
 				for (let i = left; i <= right; i++) {
 					str = swap(str, left, i);
 					permute(str, left + 1, right);
-					str = swap(str, left, i); // Zurücksetzen für die nächste Iteration
+					str = swap(str, left, i);
 				}
 			}
 		}
 
 		function swap(a: string, i: number, j: number): string {
-			const charArray = Array.from(a); // Wandelt den String in ein Array um
-			[charArray[i], charArray[j]] = [charArray[j], charArray[i]]; // Tauscht die Werte
-			return charArray.join(""); // Wandelt das Array zurück in einen String
+			const charArray = Array.from(a);
+			[charArray[i], charArray[j]] = [charArray[j], charArray[i]];
+			return charArray.join("");
 		}
 
 		permute(str, 0, str.length - 1);
