@@ -51,11 +51,13 @@
 <div class="calculatorBody">
 	<Header />
 	<NumberInput bind:inputValue onchange={calculatePermutations} />
+	{#key permutations}
 	<div class="permutations">
 		{#each permutations as permutation}
 			<PermutationOption {permutation} />
 		{/each}
 	</div>
+	{/key}
 	<Footer {currentYear} />
 </div>
 

@@ -20,6 +20,7 @@
 	a:hover {
 		background-color: #fff3;
 		border-radius: 5px;
+		border-width: 10px;
 	}
 
 	a.copied {
