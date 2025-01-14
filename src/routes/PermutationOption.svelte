@@ -9,13 +9,14 @@
 </script>
 
 <div class="permutationOption">
-	<a class={clicked ? "copied" : "default"} href="." onclick={copyClipboard}>{props.permutation}</a>
+	<a id="text" class={clicked ? "copied" : "default"} href="." onclick={copyClipboard}>{props.permutation}</a>
 </div>
 
 <style>
 	.permutationOption {
-		margin-top: 10px;
+		margin-top: 6px;
 	}
+
 
 	a:hover {
 		background-color: #fff3;

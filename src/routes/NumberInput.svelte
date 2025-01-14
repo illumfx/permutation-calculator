@@ -19,5 +19,6 @@
 		border: solid 2px;
 		border-radius: 10px;
 		text-align: center;
+		font-size: medium;
 	}
 </style>
