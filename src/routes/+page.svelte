@@ -2,13 +2,9 @@
 	import Header from "./Header.svelte";
 	import NumberInput from "./NumberInput.svelte";
 	import PermutationOption from "./PermutationOption.svelte";
-	import Footer from "./Footer.svelte";
 
 	let inputValue = $state("0");
-	let currentYear = $state(0);
 	let permutations: string[] = $state([]);
-
-	currentYear = new Date().getFullYear();
 
 	function calculatePermutations() {
 		if (!inputValue) {
@@ -48,7 +44,7 @@
 	}
 </script>
 
-<div class="calculatorBody">
+<div class="calculator-body">
 	<Header />
 	<NumberInput bind:inputValue onchange={calculatePermutations} />
 	{#key permutations}
@@ -58,7 +54,6 @@
 		{/each}
 	</div>
 	{/key}
-	<Footer {currentYear} />
 </div>
 
 <style>
@@ -78,7 +73,7 @@
 		text-decoration: none;
 	}
 
-	.calculatorBody {
+	.calculator-body {
 		text-align: center;
 		position: relative;
 	}
