@@ -48,11 +48,11 @@
 	<Header />
 	<NumberInput bind:inputValue onchange={calculatePermutations} />
 	{#key permutations}
-	<div class="permutations">
-		{#each permutations as permutation}
-			<PermutationOption {permutation} />
-		{/each}
-	</div>
+		<div class="permutations">
+			{#each permutations as permutation}
+				<PermutationOption {permutation} />
+			{/each}
+		</div>
 	{/key}
 </div>
 
